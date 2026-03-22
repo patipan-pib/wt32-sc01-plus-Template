@@ -7,6 +7,11 @@
 extern "C" {
 #endif
 
+extern void action_action_stop(lv_event_t * e);
+extern void action_action_start(lv_event_t * e);
+extern void action_action_slider(lv_event_t * e);
+extern void action_action_checkbox(lv_event_t * e);
+
 #ifdef __cplusplus
 }
 #endif
