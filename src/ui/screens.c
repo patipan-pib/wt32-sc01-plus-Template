@@ -41,6 +41,7 @@ void create_screen_main() {
             objects.bt_start = obj;
             lv_obj_set_pos(obj, 266, 143);
             lv_obj_set_size(obj, 100, 50);
+            lv_obj_add_event_cb(obj, action_action_start, LV_EVENT_PRESSED, (void *)0);
             {
                 lv_obj_t *parent_obj = obj;
                 {
@@ -58,6 +59,7 @@ void create_screen_main() {
             objects.bt_stop = obj;
             lv_obj_set_pos(obj, 77, 143);
             lv_obj_set_size(obj, 100, 50);
+            lv_obj_add_event_cb(obj, action_action_stop, LV_EVENT_PRESSED, (void *)0);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xfff32121), LV_PART_MAIN | LV_STATE_DEFAULT);
             {
                 lv_obj_t *parent_obj = obj;
@@ -77,6 +79,7 @@ void create_screen_main() {
             lv_obj_set_pos(obj, 77, 97);
             lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
             lv_checkbox_set_text(obj, "Checkbox");
+            lv_obj_add_event_cb(obj, action_action_checkbox, LV_EVENT_VALUE_CHANGED, (void *)0);
         }
         {
             // sl-val
@@ -85,6 +88,7 @@ void create_screen_main() {
             lv_obj_set_pos(obj, 77, 234);
             lv_obj_set_size(obj, 150, 10);
             lv_slider_set_value(obj, 25, LV_ANIM_OFF);
+            lv_obj_add_event_cb(obj, action_action_slider, LV_EVENT_VALUE_CHANGED, (void *)0);
         }
     }
     
